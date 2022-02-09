@@ -6,5 +6,12 @@
 # Output: 21 (as this is the 9th number of the Fibonacci Sequence)
 
 def fib_nums(num)
-  
+  return 0 if num == 1
+  fib_nums_array = [0, 1]
+  while fib_nums_array.length < num
+    fib_nums_array << fib_nums_array[-1] + fib_nums_array[-2]
+  end
+  return fib_nums_array[-1]
 end
+
+p fib_nums(2) # => 21
