@@ -11,5 +11,18 @@
 
 # So based on all this, here's a sample input/output:
 
-# Input: 'ACGTGGTCTTAA'
+string_of_rna = 'ACGTGGTCTTAA'
 # Output: 'UGCACCAGAAUU'
+
+def transcribe_rna(string_of_rna)
+  transcribe_hash = {
+    "G" => "C",
+    "C" => "G",
+    "T" => "A",
+    "A" => "U",
+  }
+  array_of_chars = string_of_rna.split(//)
+  return array_of_chars.map{ |char| char = transcribe_hash[char] }.join("")
+end
+
+p transcribe_rna(string_of_rna)
