@@ -1,4 +1,7 @@
-# Given an array of social media posts and a hash of users, return a list of posts (as an array of hashes) that replaces the submitted_by id number as the person's actual name.
+# frozen_string_literal: true
+
+# Given an array of social media posts and a hash of users, return a list of posts 
+# (as an array of hashes) that replaces the submitted_by id number as the person's actual name.
 
 # For example, given this array of posts (note that the submitted_by is an id number):
 
@@ -22,20 +25,20 @@
 # {title: 'Mondays are the worst', submitted_by: "Aunty Em", likes: 644}
 # ]
 posts = [
-    {"title": 'Me Eating Pizza', "submitted_by": 231, "likes": 1549},
-    {"title": 'i never knew how cool i was until now',
-        "submitted_by": 989, "likes": 3},
-    {"title": 'best selfie evar!!!', "submitted_by": 111, "likes": 1092},
-    {"title": 'Mondays are the worst', "submitted_by": 403, "likes": 644}
+  { "title": 'Me Eating Pizza', "submitted_by": 231, "likes": 1549 },
+  { "title": 'i never knew how cool i was until now',
+    "submitted_by": 989, "likes": 3 },
+  { "title": 'best selfie evar!!!', "submitted_by": 111, "likes": 1092 },
+  { "title": 'Mondays are the worst', "submitted_by": 403, "likes": 644 }
 ]
-users = {403 => "Aunty Em", 231 => "Joelle P.",
-         989 => "Lyndon Johnson", 111 => "Patti Q."}
+users = { 403 => 'Aunty Em', 231 => 'Joelle P.',
+          989 => 'Lyndon Johnson', 111 => 'Patti Q.' }
 
 def replace_submitted_by(posts, users)
-    posts.each do |post|
-        post[:submitted_by] = users[post[:submitted_by]]
-    end
-    return posts
+  posts.each do |post|
+    post[:submitted_by] = users[post[:submitted_by]]
+  end
+  posts
 end
 
 p replace_submitted_by(posts, users)
