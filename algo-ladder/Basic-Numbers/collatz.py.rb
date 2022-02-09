@@ -17,3 +17,24 @@
 # 4
 # 2
 # 1
+
+def collatz(num)
+  p num
+  step_counter = 0
+  while true
+    if num == 1
+      p num
+      return step_counter + 1
+    elsif num.even?
+      num /= 2
+      p num
+      step_counter += 1
+    else num.odd?
+      num = (3 * num) + 1
+      p num
+      step_counter += 1
+    end
+  end
+end
+
+p collatz(1110120021232) #=> returns 173 steps

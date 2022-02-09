@@ -4,3 +4,7 @@
 
 # Input: 9
 # Output: 21 (as this is the 9th number of the Fibonacci Sequence)
+
+def fib_nums(num)
+  
+end
