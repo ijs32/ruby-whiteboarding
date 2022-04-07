@@ -43,3 +43,25 @@ def solution(transaction, property)
 end
 
 p solution(transaction, property)
+
+def roll_some_dice(number_of_roles)
+  dice_rolls = {}
+  number_of_roles.times.with_index{|index| dice_rolls[index + 1] = rand(1..6)}
+  return dice_rolls
+end
+
+p roll_some_dice(6)
+
+sally_languages = ["french", "spanish", "english"]
+sam_recipes = ["crepes", "pizza", "pie"]
+
+if (sam_recipes.include? "crepes") || (sally_languages.include? "french")
+  puts "get married"
+else
+  puts "avoid eachother at all cost"
+end
+
+nums = []
+6.times{nums.push(rand(1..60))}
+
+p nums
